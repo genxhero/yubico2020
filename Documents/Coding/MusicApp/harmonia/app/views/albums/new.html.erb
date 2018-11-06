@@ -1,0 +1,32 @@
+<form action="<%=new_band_album_url%>" method="post">
+  <input type="hidden" name="authenticity_token" value='<%= form_authenticity_token %>'/>
+  <label for="album_title"> Album Title: </label>
+  <input type="text" name="album[title]">
+  <br>
+  <label for="album_title"> Album Year: </label>
+  <input type="text" name="album[year]">
+  <br>
+  <label for="band">Select Band</label>
+  <select name="album[band_id]">
+      <% Band.all.each do |band| %>
+      <option><%=band.name %></option>
+      <% end %>
+  </select>
+  <br>
+  <label for="radio">Album Type</label>
+  <input type="radio" name="album[studio]">
+  <br>
+  <input type="submit" name="Submit">
+
+</form>
+
+<!-- For the views:
+
+Have a drop-down to select which Band recorded the Album.
+Use selected to default-select the appropriate Band in the drop-down.
+Use radio buttons to select whether the album is a live or studio album.
+Don't use a column named type, since Rails uses this for a special purpose and everything
+will break. Use checked to default select the appropriate value.
+Make sure to provide links back to the album's band and make edit/delete buttons
+visible from the album's show page
+Update the Band show page to list/link to all of the band's albums and create a new one -->

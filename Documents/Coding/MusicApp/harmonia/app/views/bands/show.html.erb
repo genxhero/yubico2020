@@ -1,0 +1,10 @@
+<head>
+<link rel="stylesheet" type="text/css" href="app/assets/stylesheets/band_style.css">
+</head>
+<% band = Band.find(params[:id]) %>
+<h1 id="band_name"><%=band.name%></h1>
+
+<h3> Albums By <%=band.name %><h3
+  <!-- Table of albums with clickable links goes here -->
+  <a href ="<%=new_band_album_url(band.id)%>"> <button> Add a New Album</button> </a>
+  <a href ="<%=bands_url%>"> <button> Return to Bands</button> </a>
