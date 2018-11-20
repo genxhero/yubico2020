@@ -1,0 +1,25 @@
+{
+  "name": "coding-challenge-master",
+  "version": "1.0.0",
+  "description": "Aaron Goddard's coding challenge for Karuna",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "devDependencies": {
+    "@neutrinojs/react": "^8.3.0",
+    "neutrino": "^8.3.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Aaron Goddard",
+  "license": "ISC"
+}
